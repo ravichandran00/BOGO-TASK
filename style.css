@@ -1,0 +1,235 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Inter;
+    background: #fefefe;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  .container {
+    max-width: 400px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px #ddd;
+  }
+
+  .section-title {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 30px 0;
+    font-size: 20px;
+    font-weight: bold;
+    color: #ff6b8a; 
+  }
+  
+  .section-title::before,
+  .section-title::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #C8C8C8;
+    margin: 0 10px;
+  }
+  
+  
+  h2 {
+    text-align: center;
+    color:#FF6B82;
+    margin-bottom: 20px;
+  }
+  
+  .plan-box {
+    display: block;
+    border: 1px solid #ddd;
+    padding: 25px 13px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .plan-box input[type="radio"] {
+    position: absolute;
+    top: 35px;
+    left: 16px;
+  }
+  
+  .plan-content {
+    margin-left: 30px;
+  }
+  
+  .plan-content.popular {
+    background: #fff1f5;
+    border: 2px solid #f26c8c;
+    border-radius: 10px;
+    padding: 10px;
+  }
+  
+  .header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .badge {
+    background: #FF6B82;
+    color: white;
+    font-size: 12px;
+    padding: 5px 8px;
+    border-radius: 1px;
+  }
+
+  
+  .dropdown-header {
+    display: grid;
+    grid-template-columns: 1fr 5fr 2fr;
+    font-weight: 400;
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+  
+  .dropdown-row {
+    display: grid;
+    grid-template-columns: 0fr 2fr 2fr;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .dropdown-row label {
+    font-weight: normal;
+    font-size: 12px;
+  }
+  
+  select {
+    padding: 7px 15px;
+    width: 100px;
+    font-size: 11px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    appearance: none;
+    background-color: white;
+    background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D'10'%20height%3D'6'%20viewBox%3D'0%200%2010%206'%20xmlns%3D'http%3A//www.w3.org/2000/svg'%3E%3Cpath%20d%3D'M0%200l5%206%205-6H0z'%20fill%3D'%23000'%20/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 10px 6px;
+  }
+  
+  
+  .tag {
+    background: #FF6B82;
+    color: white;
+    font-size: 12px;
+    padding: 4px 7px;
+    border-radius: 5px;
+    margin-left: auto;
+    position: absolute;
+    top: 0;
+    right: 1px;
+    margin-top: 2px;
+  }
+  
+  .plan-col {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .price {
+    font-weight: 500;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  
+  .old-price {
+    text-decoration: line-through;
+    color: #999;
+    font-size: 11px;
+   
+  }
+  
+  .details {
+    font-size: 14px;
+    margin-top: 10px;
+    display: none;
+  }
+  
+  .details.expandable {
+    display: none;
+  }
+  
+  .details .row {
+    display: flex;
+    gap: 5px;
+    margin-top: 5px;
+    align-items: center;
+  }
+  
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  
+  .delivery {
+    color: #FF6B82;
+  }
+  
+  .add-to-cart {
+    width: 100%;
+    background:#FF6B82;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 16px;
+    margin-top: 15px;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 500px) {
+    .details .row {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  
+  .ribbon {
+    position: absolute;
+    top: -10px;
+    right: 10px;
+    background-color: #ff6b8a; /* pink background */
+    color: white;
+    padding: 6px 16px;
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 0 0 6px 6px;
+    z-index: 1;
+  }
+  
+  .ribbon::before,
+  .ribbon::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+  }
+  
+  .ribbon::before {
+    left: -10px;
+    border-width: 10px 10px 0 0;
+    border-color: #c44466 transparent transparent transparent;
+  }
+  
+  .ribbon::after {
+    right: -10px;
+    border-width: 10px 0 0 10px;
+    border-color: #c44466 transparent transparent transparent;
+  }
+  
