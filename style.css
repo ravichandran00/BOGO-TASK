@@ -18,6 +18,10 @@ body {
   box-shadow: 0 0 10px #ddd;
 }
 
+.standard-detail p {
+  margin: 0;
+  font-size: 12px;
+}
 .section-title {
   display: flex;
   align-items: center;
